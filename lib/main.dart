@@ -16,12 +16,12 @@ class _NinjaCardState extends State<NinjaCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.grey[700],
 
       appBar: AppBar(
-        title: Text('Ninja ID Card'),
+        title: Text('ninja ID Card'),
         centerTitle: true,
-        backgroundColor: Colors.grey[850],
+        backgroundColor: Colors.grey[750],
         elevation: 0,
       ),
       body: Padding(
@@ -34,7 +34,7 @@ class _NinjaCardState extends State<NinjaCard> {
                 backgroundColor: Colors.grey[800],
                 radius: 85,
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/111.jpeg'),
+                  backgroundImage: Image('assets/111.jpeg'),
                   radius: 80,
 
 
@@ -75,26 +75,27 @@ class _NinjaCardState extends State<NinjaCard> {
               '$ninjaLevel',
               style: TextStyle(
                 color: Colors.amberAccent[200],
-                letterSpacing: 2,
-                fontSize: 28.0,
+                letterSpacing: 1,
+                height: 5,
                 fontWeight: FontWeight.bold,
 
               ),
             ),
-            SizedBox(height: 30),
+            SizedBox(height: 30,width : 40),
             Row(
               children: <Widget>[
                 Icon(
                   Icons.email,
-                  color: Colors.grey[400],
+                  color: Colors.grey[200],
                 ),
                 SizedBox(width: 10),
                 Text(
-                  'siddhantslight@gmail.com',
+                  'siddhant.11912066@iiitsonepat.ac.in',
                   style: TextStyle(
-                    color: Colors.grey[400],
+                    color: Colors.grey[200],
                     fontSize: 18,
-                    letterSpacing: 1,
+                    
+                    letterSpacing: 3,
 
                   ),
 
@@ -109,6 +110,7 @@ class _NinjaCardState extends State<NinjaCard> {
         onPressed: (){
           setState(() {
             ninjaLevel += 1;
+            //something else too
           });
         },
         child: Icon(Icons.add),
