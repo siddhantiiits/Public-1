@@ -16,12 +16,12 @@ class _NinjaCardState extends State<NinjaCard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[700],
+      backgroundColor: Colors.grey[600],
 
       appBar: AppBar(
         title: Text('ninja ID Card'),
         centerTitle: true,
-        backgroundColor: Colors.grey[750],
+        backgroundColor: Colors.grey[650],
         elevation: 0,
       ),
       body: Padding(
@@ -31,11 +31,11 @@ class _NinjaCardState extends State<NinjaCard> {
           children: <Widget>[
             Center(
               child: CircleAvatar(
-                backgroundColor: Colors.grey[800],
-                radius: 85,
+                backgroundColor: Colors.grey[400],
+                radius: 55,
                 child: CircleAvatar(
                   backgroundImage: Image('assets/111.jpeg'),
-                  radius: 80,
+                  radius: 50,
 
 
                 ),
@@ -46,13 +46,13 @@ class _NinjaCardState extends State<NinjaCard> {
               'NAME',
               style: TextStyle(
                 color: Colors.grey,
-                letterSpacing: 2,
+                letterSpacing: 3,
 
               ),
             ),
-            SizedBox(height: 10),
+            SizedBox(height: 40),
             Text(
-              'Siddhant',
+              'Siddhant Tiwari',
               style: TextStyle(
                 color: Colors.amberAccent[200],
                 letterSpacing: 2,
@@ -67,7 +67,14 @@ class _NinjaCardState extends State<NinjaCard> {
               style: TextStyle(
                 color: Colors.grey,
                 letterSpacing: 2,
-
+              ),
+            ),
+            SizedBox(height: 30),
+            Text(
+              'High Level',
+              style: TextStyle(
+                color: Colors.grey[500],
+                letterSpacing: 3,
               ),
             ),
             SizedBox(height: 10),
@@ -77,11 +84,11 @@ class _NinjaCardState extends State<NinjaCard> {
                 color: Colors.amberAccent[200],
                 letterSpacing: 1,
                 height: 5,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.light,
 
               ),
             ),
-            SizedBox(height: 30,width : 40),
+            SizedBox(width : 40),
             Row(
               children: <Widget>[
                 Icon(
@@ -93,31 +100,24 @@ class _NinjaCardState extends State<NinjaCard> {
                   'siddhant.11912066@iiitsonepat.ac.in',
                   style: TextStyle(
                     color: Colors.grey[200],
-                    fontSize: 18,
-                    
                     letterSpacing: 3,
-
                   ),
-
                 ),
               ],
             ),
-
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
           setState(() {
-            ninjaLevel += 1;
-            //something else too
+            ninjaLevel += 2;
+            // kuch to haiii
           });
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.grey[800],
+        backgroundColor: Colors.grey[400],
       ),
     );
   }
 }
-
-
